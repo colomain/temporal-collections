@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.kowboy.temporal.domain.PhoneNumber" table="PHONE_NUMBERS">
+		<id name="id" column="ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="numberString"></property>
+		<property name="areaCode"></property>
+		<component name="timePeriod" class="org.kowboy.temporal.TimePeriod">
+			<property name="startDate" column="START_DATE" not-null="true" type="java.util.Date"/>
+			<property name="endDate" column="END_DATE" not-null="true" type="java.util.Date"/>
+		</component>
+	</class>
+</hibernate-mapping>

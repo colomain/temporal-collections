@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.kowboy.temporal.domain.Person" table="PEOPLE">
+		<id name="id" column="ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="firstName"></property>
+		<property name="lastName"></property>
+		
+		<set name="phoneHistory" lazy="false" cascade="all-delete-orphan"
+			collection-type="org.hibernate.usertype.PeriodOfExistenceType" order-by="ID">
+			<key column="PERSON_ID"/>
+			<one-to-many class="org.kowboy.temporal.domain.PhoneNumber"/>
+		</set>
+	</class>
+</hibernate-mapping>
