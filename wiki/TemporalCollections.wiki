@@ -1,5 +1,3 @@
-=Temporal Collections=
-
 The Temporal Collections library is an implementation of several "temporal" data patterns, along with Hibernate custom collection wrappers for defining temporal entity relationships. Many of the concepts used in developing this library were borrowed from Martin Fowler's blog on [http://martinfowler.com/ap2/timeNarrative.html patterns for things that change with time].
 
 ==Temporal Data==
