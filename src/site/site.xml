@@ -1,0 +1,6 @@
+<project name="Temporal Collections">
+	<body>
+		<menu ref="reports"/>
+	</body>
+	<publishDate position="navigation-bottom" format="MM-dd-yyyy"/>
+</project>
