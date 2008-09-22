@@ -68,7 +68,7 @@ It is often the case that multiple, parallel time lines must co-exist in the sam
 || 123-4456       || W          || 2006-09-10  || 2007-04-13  ||
 || 321-3422       || W          || 2007-04-14  || 9999-12-31  ||
 || 893-2235       || H          || 2006-09-10  || 2008-02-13  ||
-|| 123-4456       || W          || 2008-02-14  || 9999-12-31  ||
+|| 123-4456       || H          || 2008-02-14  || 9999-12-31  ||
 
 Although this example is a bit contrived, it illustrates the point. Despite the overlap in time periods, all of these records can exist in the same TimeLine collection as long as `getTimeLineKey()` returns the Phone Type. Actually, a normalized time line is merely a simplified case of a denormalized time line where the time line key is constant. In fact, this is how `NormalizedTemporalData` is implemented (see the source).
   
