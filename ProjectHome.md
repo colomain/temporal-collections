@@ -1,0 +1,1 @@
+Temporal Collections is an implementation of the Temporal Data Pattern for Hibernate using Hibernate's user-defined collection capabilities.
